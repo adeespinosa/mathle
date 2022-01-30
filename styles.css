@@ -1,0 +1,375 @@
+body{
+  background-color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+/*Customized Scroll*/
+*::-webkit-scrollbar {
+  width: 15px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #565758;
+  border-radius: 20px;
+  border: 5px solid #121213;
+}
+
+/* Navigation Bar */
+nav{
+  color: #565758;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 460.8px;
+  height: 10%;
+  border-bottom: 1px solid #565758;
+  position:relative;
+}
+
+.help{
+  position:absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.settings{
+  position:absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.settings .icon{
+  margin: 0 10px;
+}
+
+i{
+  font-size: 1.5rem;
+}
+
+h1{
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/*Help*/
+.how-to-play{
+  background-color: #121213;
+  width: 460.8px;
+  height: 452.4px;
+  position:absolute;
+  top: 110%;
+  z-index: 10;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  overflow: auto;
+}
+.hide{
+  visibility: hidden;
+}
+.instructions{
+  text-align: justify;
+  padding: 0 15px;
+}
+h3{
+  margin-bottom: 8px;
+  text-align: center;
+}
+p{
+  margin: 8px auto;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+hr{
+  border: none;
+  border-top: 1px solid;
+  color: #565758;
+  width: 30%;
+}
+.close-window{
+  position:absolute;
+  right: 3%;
+  top: 5%;
+  color: #565758;
+  cursor: pointer;
+}
+
+/*Statistics and Settings*/
+.statistics{
+  background-color: #121213;
+  width: 460.8px;
+  height: 226.2px;
+  position:absolute;
+  top: 110%;
+  z-index: 10;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.streak{
+  text-align: justify;
+  padding: 0 15px;
+}
+.reset{
+  right: 14%;
+  top: -14%;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/*Game Panel*/
+.game-panel{
+  width: 460.8px;
+  height: 60%;
+  position: relative;
+}
+
+.left-game-panel{
+  width: 90%;
+  height: 80%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7%;
+  left: -50%;
+}
+
+.right-game-panel{
+  width: 90%;
+  height: 80%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 7%;
+  right: -50%;
+}
+
+.guess-rows{
+  width: 66%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.indicator-rows{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.guess{
+  width: 100%;
+  height: 16.25%;
+  margin: 3px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.letter{
+  height: 100%;
+  width: 25%;
+  border: 1px solid #565758;
+  margin: 2px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+.letter.repeat{
+  color: red;
+}
+
+.checker{
+  width: 100%;
+  height: 16.25%;
+  border: 1px solid #565758;
+  margin: 2px 10px;
+  background-color: #565758;
+  display:flex;
+  flex-direction: row;
+  padding-left: 10px;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.checker-adjust.winner{
+  font-size: 1.5rem;
+  background-color: lightgreen;
+}
+.checker-adjust.loser{
+  font-size: 1.5rem;
+  background-color: red;
+}
+
+/*Keypad Panel*/
+.keypad-panel{
+  width:460.8px;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.new-game{
+  position: absolute;
+  right: 14%;
+  top: -14%;
+  border-radius: 5px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 10px;
+}
+
+.delete{
+  position: absolute;
+  left: 15%;
+  top: -14%;
+  border-radius: 5px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px 10px;
+}
+
+.keypad{
+  width: 80%;
+  height: 70%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #565758;
+}
+
+.num-row{
+  width:90%;
+  height: 40%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.num-key{
+  height:100%;
+  width:20%;
+  border-radius: 5px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  cursor: pointer;
+}
+.button-disabled{
+  pointer-events: none;
+}
+
+button{
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.right-clicked{
+  color: red;
+  background-color: gray;
+  opacity: 20%;
+}
+
+
+
+
+/*Mobile CSS*/
+@media (max-width: 500px){
+
+.game-panel{
+  position: fixed;
+  top: 10%;
+  overflow: auto;
+}
+.left-game-panel{
+  left: 0;
+}
+
+.right-game-panel{
+  left: 0;
+  top: 87%
+}
+
+.keypad-panel{
+  position: fixed;
+  z-index: 20;
+  top: 70%;
+  background-color: black;
+}
+
+.keypad{
+  position: absolute;
+  top: 27%;
+  height: 67%;
+}
+
+.new-game{
+  top: 5%;
+  font-size: 1.5rem;
+  right: 20%;
+}
+
+.delete{
+  top: 5%;
+  font-size: 1.5rem;
+  left: 20%;
+}
+}
